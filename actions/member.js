@@ -1,9 +1,11 @@
-import { Member } from "../models/memberModel";
+import Member from "../models/member.js";
 async function createMember(req, res) {
   try {
-    console.log(req);
-    return false;
+    let data = req.body;
 
+    console.log(req.body.memberName);
+    return false;
+    // this wont executre whauahaha
     const member = new Member({
       memberName: data.memberName,
       gender: data.gender,
