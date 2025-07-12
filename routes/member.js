@@ -1,5 +1,6 @@
 import { Router } from "express";
+import { createMember } from "../actions/member";
 
 const memberRouter = Router();
-memberRouter.post("/", createMember);
+memberRouter.post("/members/create", createMember);
 export default memberRouter;

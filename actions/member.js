@@ -1,4 +1,18 @@
-async function createMember(req, res) {}
+import { Member } from "../models/memberModel";
+async function createMember(req, res) {
+  try {
+    console.log(req);
+    return false;
+
+    const member = new Member({
+      memberName: data.memberName,
+      gender: data.gender,
+    });
+    await member.save();
+  } catch (error) {
+    console.log(error);
+  }
+}
 export { createMember };
 
 // "use server";
@@ -18,3 +32,5 @@ export { createMember };
 //   return member.toString();
 // }
 // export { createMember };
+
+// these are just for reading and references....
