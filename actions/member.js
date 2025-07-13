@@ -3,14 +3,18 @@ async function createMember(req, res) {
   try {
     let data = req.body;
 
-    console.log(req.body.memberName);
-    return false;
-    // this wont executre whauahaha
+    // console.log(req.body.memberName);
+    // return false;
+    // // this wont executre whauahaha
     const member = new Member({
       memberName: data.memberName,
       gender: data.gender,
     });
     await member.save();
+    res.send({
+      success: true,
+      message: "SUCKSEXFULLY DATA ACCUMULATED INTO THE DATABASE!!!",
+    });
   } catch (error) {
     console.log(error);
   }
